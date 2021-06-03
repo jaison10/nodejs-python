@@ -1,0 +1,32 @@
+.main-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700;
+}
+.fileHeading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    margin-top: 5%;
+}
+.button-box{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    margin-top: 5%;
+}
+.btn{
+    border-radius: 10px;
+    width: 20%;
+    height: 13%;
+    cursor: pointer;
+    background-color: black;
+}
+.buttonName{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    color: white;
+}
+.textArea{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    border: solid 2px #010101;
+    border-radius: 10px;
+}

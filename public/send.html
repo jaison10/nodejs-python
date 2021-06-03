@@ -1,7 +1,25 @@
-<form action="/send" method="POST" enctype="multipart/form-data" >
-    <textarea type="text" name="msg" placeholder="message"></textarea> </br>
-    Choose an excel file to upload: <input name="excelfile" type="file" accept=".xlsx, .xls, .csv" />
-    <div class="button-box">
-        <button type="submit"><span>Send</span></button>
-    </div>
-</form>
+<html>
+    <head>
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div style="width:100%;">
+            <div style="display: flex;
+            justify-content: center;">
+                <form action="/send" method="POST" enctype="multipart/form-data" >
+                    <h1 class="main-heading">Imagine labs welcoming you!</h1>
+                    <textarea class="textArea" type="text" name="msg" placeholder="type your message here." cols="70" rows="5"></textarea> </br>
+                    <div class="fileHeading">
+                        Choose an excel file to upload: <input name="excelfile" type="file" accept=".xlsx, .xls, .csv" />
+                    </div>
+                    <div class="button-box">
+                        <button class="btn" type="submit"><span class="buttonName">SEND</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

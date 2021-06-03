@@ -52,10 +52,12 @@ app.post("/send", upload.any(), (req, res)=>{
     childPython.on('close',(code)=>{
         // console.log("Child process exited with code: ", code);
         if(code == 0){
-            return res.status(200).send("Successfully sent.")
+            // return res.status(200).send("Successfully sent.")
+            console.log("Data has been sent");
         }
-        res.status(400).send("Found some problems.")
+        // res.status(400).send("Found some problems.")
     })
+    return res.redirect("return.html")
 })
 
 
