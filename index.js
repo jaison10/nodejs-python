@@ -1,6 +1,7 @@
 const { spawn } = require('child_process')
 const express = require('express');
 var bodyParser = require('body-parser');
+var path = require('path')
 
 const app = express()
 app.use(bodyParser.json());
@@ -14,19 +15,30 @@ app.use(bodyParser.urlencoded({
 const PORT = process.env.PORT || 3000
 
 const multer = require('multer')
-const upload = multer({
-    dest : "upload"
+// const upload = multer({
+//     dest : "files",
+// })
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, "sheet.csv")
+    }
 })
+var upload = multer({ storage: storage })
 
 
-app.get('/', upload.any(), (req, res)=>{
+app.get('/', (req, res)=>{
     return res.redirect("send.html");
 })
 
-app.post("/send", (req, res)=>{
+app.post("/send", upload.any(), (req, res)=>{
     const msg = req.body.msg;
 
-
+    console.log(msg);
     console.log(req.body);
 
     const childPython = spawn('python',['testwhatkit.py', msg])

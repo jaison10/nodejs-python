@@ -8,7 +8,7 @@ import sys
 message = sys.argv[1]
 # message = "from manual run"
 
-df = pd.read_csv('sheet2.csv')
+df = pd.read_csv('./uploads/sheet.csv')
 
 
 for n in range(3):
@@ -26,7 +26,7 @@ for n in range(3):
     number = "91"+number
 
 
-    messege = "Hi "+ name_first+ message
+    messege = "Hi "+ name_first+ " " +message
     # messege = "i hate you 🤢"
 
     messege = messege.replace(" ","%20")
