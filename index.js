@@ -26,20 +26,6 @@ app.get('/', upload.any(), (req, res)=>{
 app.post("/send", (req, res)=>{
     const msg = req.body.msg;
 
-    // upload(req,res,function(err) {
-  
-    //     if(err) {
-
-    //         res.send(err)
-    //     }
-    //     else {
-    //         // SUCCESS, image successfully uploaded
-    //         // res.send("Success, Image uploaded!")
-    //         console.log("got image");
-    //     }
-    // })
-
-
 
     console.log(req.body);
 
